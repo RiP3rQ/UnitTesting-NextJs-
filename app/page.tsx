@@ -13,8 +13,10 @@ export default function Home() {
       <h1>Home Page</h1>
       <button>Click Me</button>
       <div>
-        <label htmlFor="randomText">Enter Random Text: </label>
-        <input id="randomText" />
+        <label htmlFor="randomText" data-testid="random_test_label">
+          Enter Random Text:{" "}
+        </label>
+        <input id="randomText" data-testid="random_test_text" />
       </div>
       <div>
         <label htmlFor="specificText">Enter Specific Text:</label>
@@ -26,7 +28,7 @@ export default function Home() {
       <div>
         <input value="AUDI Q5" onChange={() => {}} />
       </div>
-      {/* <div>
+      <div>
         {showText && <span>This is the text!</span>}
         <button
           onClick={() => {
@@ -38,7 +40,7 @@ export default function Home() {
           Show Text
         </button>
       </div>
-      <UserProfile
+      {/* <UserProfile
         displayName={"ansonasdasdadasuidasuidasgidasgduiasydghasiudasdaid"}
         username="anson"
         email="anson@anson.com"
