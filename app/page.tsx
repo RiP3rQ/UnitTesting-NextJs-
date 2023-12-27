@@ -46,8 +46,8 @@ export default function Home() {
         email="anson@anson.com"
         isEmailVerified={false}
       />
-      <UserList />
-      <LoginForm />
+      {/* <UserList />
+      <LoginForm /> */}
     </main>
   );
 }
