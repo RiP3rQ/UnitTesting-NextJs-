@@ -4,15 +4,15 @@ export async function GET(req: any) {
   return NextResponse.json([
     {
       id: 1,
-      username: "anson",
+      username: "essa",
     },
     {
       id: 2,
-      username: "jack",
+      username: "bessa",
     },
     {
       id: 3,
-      username: "mike",
+      username: "messa",
     },
   ]);
 }
