@@ -40,14 +40,14 @@ export default function Home() {
           Show Text
         </button>
       </div>
-      {/* <UserProfile
+      <UserProfile
         displayName={"ansonasdasdadasuidasuidasgidasgduiasydghasiudasdaid"}
         username="anson"
         email="anson@anson.com"
         isEmailVerified={false}
       />
       <UserList />
-      <LoginForm /> */}
+      <LoginForm />
     </main>
   );
 }

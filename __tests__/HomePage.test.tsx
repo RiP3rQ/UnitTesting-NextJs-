@@ -1,5 +1,6 @@
 import Home from "@/app/page";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Home Page", () => {
   describe("Rendering", () => {
@@ -54,7 +55,19 @@ describe("Home Page", () => {
   describe("Behavior", () => {
     it("should click on Show Text button and find new text", async () => {
       render(<Home />);
+      expect(screen.queryByText("This is the text!")).not.toBeInTheDocument();
       const button = screen.getByRole("button", { name: "Show Text" });
+      await userEvent.click(button);
+      //expect(screen.getByText("This is the text!")).toBeInTheDocument();
+      //   expect(
+      //     await screen.findByText("This is the text!", {}, { timeout: 5000 })
+      //   ).toBeInTheDocument(); // wait for 5 seconds for the text to appear
+      await waitFor(
+        () => {
+          expect(screen.getByText("This is the text!")).toBeInTheDocument();
+        },
+        { timeout: 5000 }
+      );
     });
   });
 });
